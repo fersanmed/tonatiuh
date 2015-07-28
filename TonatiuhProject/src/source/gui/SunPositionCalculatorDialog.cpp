@@ -180,7 +180,7 @@ QDateTime SunPositionCalculatorDialog::GetTime()
 
 void SunPositionCalculatorDialog::ReadSettings()
 {
-	QSettings settings( "NREL UTB CENER", "Tonatiuh" );
+	QSettings settings;//( "NREL UTB CENER", "Tonatiuh" );
 	calendarWidget->setSelectedDate( settings.value( "sunpositioncalculator.date" ).toDate() );
 
 
@@ -195,7 +195,7 @@ void SunPositionCalculatorDialog::ReadSettings()
 
 void SunPositionCalculatorDialog::WriteSettings()
 {
-	QSettings settings( "NREL UTB CENER", "Tonatiuh" );
+	QSettings settings;//( "NREL UTB CENER", "Tonatiuh" );
 	settings.setValue( "sunpositioncalculator.date", calendarWidget->selectedDate() );
 
 	settings.setValue( "sunpositioncalculator.utTimeSelected", utRadio->isChecked() );
